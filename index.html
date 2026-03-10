@@ -37,7 +37,21 @@ animation: slideLeft 1.2s ease forwards;
 }
 
 .card{
-animation: slideUp 1s ease forwards;
+transition: transform 0.3s;
+}
+.card:hover{
+transform: scale(1.05);
+}
+
+#about{
+opacity:0;
+animation: fadeInUp 1s ease forwards;
+}
+
+#projects{
+opacity:0;
+animation: fadeInUp 1s ease forwards;
+animation-delay:0.3s;
 }
 
 section{
@@ -99,6 +113,16 @@ opacity:1;
 transform: translateY(0);
 }
 }
+@keyframes fadeInUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}  
   /* navbar */
 
 nav{
