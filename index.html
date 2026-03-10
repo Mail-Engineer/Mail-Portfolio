@@ -21,19 +21,14 @@ color:white;
 }
 
 .title{
-font-size:60px;
-opacity:0;  
-animation:slideDown 1.2s ease forwards;
 }
 
 .subtitle{
 font-size:22px;
 color:#cbd5f5;
-animation:fadeIn 2s ease forwards;
 }
 
 #about p{
-animation: slideLeft 1.2s ease forwards;
 }
 
 .card{
@@ -43,12 +38,15 @@ transition: transform 0.3s;
 transform: scale(1.05);
 }
 
-#about{
-animation: fadeUp 1s ease;
+.reveal{
+opacity:0;
+transform: translateY(40px);
+transition: all 0.8s ease;
 }
 
-#projects{
-animation: fadeUp 1s ease;
+.reveal.active{
+opacity:1;
+transform: translateY(0);
 }
 
 section{
@@ -214,8 +212,7 @@ Robotics & Computer Engineering Portfolio
 
 </section>
 
-<section id="about">
-
+<section id="about" class="reveal">
 <h1>About Me</h1>
 
 <p>
@@ -224,13 +221,13 @@ Hi, I'm Mail. I love robotics, Arduino, and building embedded systems projects. 
 
 </section>
 
-<section id="projects">
+<section id="projects" class="reveal">
 
 <h1>Projects</h1>
 
 <div class="projects">
 
-<div class="card">
+<div class="card reveal">
 <h3>Smart Robot Car</h3>
 <p>Arduino autonomous robot car</p>
 </div>
@@ -252,22 +249,28 @@ Hi, I'm Mail. I love robotics, Arduino, and building embedded systems projects. 
 <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 
 <script>
-particlesJS("particles-js", {
-  "particles": {
-    "number": {
-      "value": 80
-    },
-    "size": {
-      "value": 3
-    },
-    "move": {
-      "speed": 2
-    },
-    "line_linked": {
-      "enable": true
-    }
-  }
-});
+function reveal(){
+
+const reveals = document.querySelectorAll(".reveal");
+
+for(let i = 0; i < reveals.length; i++){
+
+let windowHeight = window.innerHeight;
+let elementTop = reveals[i].getBoundingClientRect().top;
+let elementVisible = 100;
+
+if(elementTop < windowHeight - elementVisible){
+reveals[i].classList.add("active");
+}else{
+reveals[i].classList.remove("active");
+}
+
+}
+
+}
+
+window.addEventListener("scroll", reveal);
+window.addEventListener("load", reveal);
 </script>
 
 </body>
