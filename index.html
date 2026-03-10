@@ -20,7 +20,38 @@ background:#0f172a;
 color:white;
 }
 
-/* navbar */
+  .title{
+font-size:60px;
+animation:slideDown 1.2s ease;
+}
+
+.subtitle{
+font-size:22px;
+color:#cbd5f5;
+animation:fadeIn 2s ease;
+}
+
+@keyframes slideDown{
+from{
+opacity:0;
+transform:translateY(-50px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+}
+to{
+opacity:1;
+}
+}
+
+  /* navbar */
 
 nav{
 position:fixed;
@@ -103,9 +134,9 @@ background:#334155;
 
 <section id="home">
 
-<h1 data-aos="fade-up">Mel Engineer</h1>
+<h1 class="title" data-aos="fade-up">Mel Engineer</h1>
 
-<p data-aos="fade-up" data-aos-delay="200">
+<p class="subtitle" data-aos="fade-up" data-aos-delay="200">
 Robotics & Computer Engineering Portfolio
 </p>
 
