@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+
 <title>Mel Engineer</title>
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 <style>
 
@@ -47,6 +51,7 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
+padding:20px;
 }
 
 h1{
@@ -59,24 +64,26 @@ color:#cbd5f5;
 max-width:600px;
 }
 
-/* project cards */
+/* projects */
 
 .projects{
 display:flex;
 gap:30px;
-margin-top:30px;
+margin-top:40px;
+flex-wrap:wrap;
+justify-content:center;
 }
 
 .card{
 background:#1e293b;
 padding:25px;
 border-radius:15px;
-width:220px;
-transition:0.3s;
+width:230px;
+transition:0.4s;
 }
 
 .card:hover{
-transform:translateY(-10px);
+transform:translateY(-10px) scale(1.05);
 background:#334155;
 }
 
@@ -87,54 +94,66 @@ background:#334155;
 <body>
 
 <nav>
+
 <a href="#home">Home</a>
 <a href="#about">About</a>
 <a href="#projects">Projects</a>
+
 </nav>
 
 <section id="home">
 
-<h1>Mel Engineer</h1>
-<p>Robotics & Computer Engineering Portfolio</p>
+<h1 data-aos="fade-up">Mel Engineer</h1>
+
+<p data-aos="fade-up" data-aos-delay="200">
+Robotics & Computer Engineering Portfolio
+</p>
 
 </section>
 
 <section id="about">
 
-<h1>About Me</h1>
+<h1 data-aos="fade-right">About Me</h1>
 
-<p>
-Hi, I'm Mel.  
-I am a high school student interested in Robotics, Arduino, and Computer Engineering.  
-I build robots and embedded systems projects.
+<p data-aos="fade-left">
+Hi, I'm Mel. I love robotics, Arduino, and building embedded systems projects. My goal is to study Computer Engineering.
 </p>
 
 </section>
 
 <section id="projects">
 
-<h1>Projects</h1>
+<h1 data-aos="zoom-in">Projects</h1>
 
 <div class="projects">
 
-<div class="card">
+<div class="card" data-aos="flip-left">
 <h3>Smart Robot Car</h3>
-<p>Arduino 2WD autonomous robot</p>
+<p>Arduino autonomous robot car</p>
 </div>
 
-<div class="card">
+<div class="card" data-aos="flip-left" data-aos-delay="200">
 <h3>Radar Scanner</h3>
-<p>Ultrasonic radar with servo</p>
+<p>Ultrasonic radar system</p>
 </div>
 
-<div class="card">
+<div class="card" data-aos="flip-left" data-aos-delay="400">
 <h3>AI Camera</h3>
-<p>Object detection project</p>
+<p>Object detection system</p>
 </div>
 
 </div>
 
 </section>
 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+AOS.init({
+duration:1000,
+});
+</script>
+
 </body>
+
 </html>
