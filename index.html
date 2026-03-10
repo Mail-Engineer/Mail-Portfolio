@@ -39,14 +39,21 @@ color:#cbd5f5;
 .card{
 transition: transform 0.2s;
 }
+.card{
+transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card{
+transform: translateZ(0);
+}
 .card:hover{
-transform: scale(1.05);
-box-shadow:0 0 20px rgba(59,130,246,0.6);
+transform: translateY(-6px) scale(1.04);
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
 }
 .reveal{
 opacity:0;
 transform: translateY(80px);
-transition: all 0.7s ease-out;
+transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+will-change: transform, opacity;
 }
 
 .reveal.active{
@@ -74,11 +81,11 @@ transition-delay:0.1s;
 }
 
 .projects .card:nth-child(2){
-transition-delay:0.1s;
+transition-delay:0.2s;
 }
 
 .projects .card:nth-child(3){
-transition-delay:0.1s;
+transition-delay:0.3s;
 }
 
   /* navbar */
