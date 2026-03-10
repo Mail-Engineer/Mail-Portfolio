@@ -42,16 +42,16 @@ transition: transform 0.3s;
 .card:hover{
 transform: scale(1.05);
 }
-.reveal.active .card:nth-child(1){
+.projects .card:nth-child(1){
 transition-delay:0.1s;
 }
 
-.reveal.active .card:nth-child(2){
-transition-delay:0.3s;
+.projects .card:nth-child(2){
+transition-delay:0.2s;
 }
 
-.reveal.active .card:nth-child(3){
-transition-delay:0.5s;
+.projects .card:nth-child(3){
+transition-delay:0.3s;
 }
 .reveal{
 opacity:0;
@@ -212,11 +212,12 @@ justify-content:center;
 background:#1e293b;
 padding:20px;
 border-radius:12px;
-transition: transform 0.3s ease;
+transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .card:hover{
 transform: scale(1.05);
+box-shadow:0 0 20px rgba(255,255,255,0.3);
 }
 </style>
 
