@@ -31,6 +31,15 @@ color:#cbd5f5;
 animation:fadeIn 2s ease;
 }
 
+#particles-js{
+position:fixed;
+width:100%;
+height:100%;
+top:0;
+left:0;
+z-index:-1;
+}
+
 @keyframes slideDown{
 from{
 opacity:0;
@@ -123,7 +132,7 @@ background:#334155;
 </head>
 
 <body>
-
+<div id="particles-js"></div>
 <nav>
 
 <a href="#home">Home</a>
@@ -177,11 +186,16 @@ Hi, I'm Mail. I love robotics, Arduino, and building embedded systems projects. 
 
 </section>
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 
 <script>
-AOS.init({
-duration:1000,
+particlesJS("particles-js", {
+particles: {
+number: { value: 80 },
+size: { value: 3 },
+move: { speed: 1 },
+line_linked: { enable: true }
+}
 });
 </script>
 
