@@ -22,15 +22,13 @@ color:white;
 
 .title{
 font-size:60px;
-animation:slideDown 1.2s ease;
-animation-fill-mode:forwards;
+animation:slideDown 1.2s ease forwards;
 }
 
 .subtitle{
 font-size:22px;
 color:#cbd5f5;
-animation:fadeIn 2s ease;
-animation-fill-mode:forwards;
+animation:fadeIn 2s ease forwards;
 }
 
 section{
@@ -45,17 +43,6 @@ height:100%;
 top:0;
 left:0;
 z-index:-1;
-}
-
-@keyframes slideDown{
-from{
-opacity:0;
-transform:translateY(-50px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
 }
 
 @keyframes fadeIn{
